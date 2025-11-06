@@ -3,7 +3,8 @@ name: upload-jar
 on:
   push:
     tags:
-
+    branches-ignore:
+      - *
 
 jobs:
   build:
