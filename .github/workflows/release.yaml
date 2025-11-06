@@ -29,5 +29,4 @@ jobs:
         uses: softprops/action-gh-release@v2.4.1
         if: github.ref_type == 'tag'
         with:
-          name: "keycloak-otp-webhook-${{ github.ref_name }}.jar"
           files: target/keycloak-otp-webhook.jar
