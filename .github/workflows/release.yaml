@@ -23,7 +23,6 @@ jobs:
 
       - name: Build Maven
         run: |
-          apt-get install -y maven               
           mvn -B package --file pom.xml
 
       - name: Upload Jar file to github release
