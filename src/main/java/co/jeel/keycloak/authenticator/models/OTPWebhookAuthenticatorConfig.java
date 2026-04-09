@@ -13,6 +13,7 @@ public class OTPWebhookAuthenticatorConfig {
 	private long timeoutSeconds;
 	private boolean enableLogging;
 	private boolean mocked;
+	private String mockedOtp;
 
 	public int getOtpLength() {
 		return otpLength;
@@ -78,12 +79,25 @@ public class OTPWebhookAuthenticatorConfig {
 		this.mocked = mocked;
 	}
 
+	public String getMockedOtp() {
+		return mockedOtp;
+	}
+
+	public void setMockedOtp(String mockedOtp) {
+		this.mockedOtp = mockedOtp;
+	}
+
 	@Override
 	public String toString() {
-		return "OTPWebhookAuthenticatorConfig [length=" + otpLength + ", expirySeconds=" + otpExpirySeconds
-				+ ", userIdentifyingAttribute="
-				+ userIdentifyingAttribute + ", allowedChars=" + Arrays.toString(allowedChars) + ", webhook=" + webhook
-				+ ", timeoutSeconds=" + timeoutSeconds + ", enableLogging=" + enableLogging + "]";
+		return "OTPWebhookAuthenticatorConfig [" +
+				"length=" + otpLength +
+				", expirySeconds=" + otpExpirySeconds +
+				", userIdentifyingAttribute=" + userIdentifyingAttribute +
+				", allowedChars=" + Arrays.toString(allowedChars) +
+				", webhook=" + webhook +
+				", timeoutSeconds=" + timeoutSeconds +
+				", mockedOtp='" + mockedOtp +
+				", enableLogging=" + enableLogging + "]";
 	}
 
 }

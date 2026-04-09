@@ -114,6 +114,14 @@ public class OTPWebhookAuthenticatorFactory implements AuthenticatorFactory {
 				.helpText("Enable Mocked OTP for non-prod environments")
 				.type(ProviderConfigProperty.BOOLEAN_TYPE)
 				.add()
+
+				.property()
+				.name(OTPWebhookAuthenticatorConfigEnums.MOCKED_OTP.getKey())
+				.label("Mocked OTP")
+				.helpText("Mocked OTP value to use when mock mode is enabled")
+				.type(ProviderConfigProperty.STRING_TYPE)
+				.defaultValue("123456")
+				.add()
 				
 			.build();
 		// @formatter:on

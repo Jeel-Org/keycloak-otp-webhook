@@ -10,7 +10,7 @@ public enum OTPWebhookAuthenticatorConfigEnums {
 	TIMEOUT_SECONDS("timeoutSeconds"),
 	ENABLE_LOGGING("enableLogging"),
 	MOCKED("mocked"),
-	;
+	MOCKED_OTP("mockedOtp");
 	// @formatter:on
 	
 	private String key;

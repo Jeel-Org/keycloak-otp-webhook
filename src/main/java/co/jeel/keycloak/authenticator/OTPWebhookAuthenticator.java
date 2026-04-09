@@ -40,7 +40,7 @@ public class OTPWebhookAuthenticator implements Authenticator {
 
 			String otp;
 			if (config.isMocked()) {
-				otp = "3333";
+				otp = config.getMockedOtp();
 			} else {
             	otp = SecretGenerator.getInstance().randomString(config.getOtpLength(), config.getAllowedChars());
 			}
