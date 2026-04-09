@@ -30,3 +30,12 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           files: target/keycloak-otp-webhook.jar
+
+      - name: Trigger distribution build
+        if: github.ref_type == 'tag'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.KC_REPOS_PAT }}
+          repository: Jeel-Org/keycloak-jeel-distribution
+          event-type: provider-release
+          client-payload: '{"provider": "keycloak-otp-webhook", "version": "${{ github.ref_name }}", "environment": "staging"}'
