@@ -15,7 +15,7 @@
 		<maven.compiler.release>17</maven.compiler.release>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<jackson.version>2.18.2</jackson.version>
+		<jackson.version>2.18.11</jackson.version>
 		<smallrye.config.version>3.11.4</smallrye.config.version>
 		<quarkus.version>3.20.0</quarkus.version>
 	</properties>
